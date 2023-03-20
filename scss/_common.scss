@@ -1,7 +1,7 @@
 /* CUSTOM PROPS */
 :root {
   --primary-bg-color: #fff;
-  --text-color: #000;
+  --text-color: #fff;
   --accent-color: ;
 }
 
@@ -30,71 +30,76 @@ html {
   outline-offset: 3px;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 body {
   height: 100%;
-  font-family: "Arial", sans-serif;
+  font-family: "Exo", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 300;
   color: var(--text-color);
-  background-color: var(--primary-bg-color);
+  background: #0A0B16 url("../images/bg.png") no-repeat center / cover;
   display: flex;
   flex-direction: column;
+  align-items: center;
+ justify-content: center;
 }
 
-/* SCROLL BAR */
-::-webkit-scrollbar {
-  @media only screen and (min-width: $tablet) {
-    width: 12px;
-  }
-}
+.image {
+  position: relative;
 
-::-webkit-scrollbar-track {
-  @media only screen and (min-width: $tablet) {
-    border-radius: 8px;
-    box-shadow: inset 0 0 5px grey;
-  }
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 395px;
+    height: 155px;
+    background: url("../images/after.png") no-repeat center / contain;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform-origin: left;
 
-::-webkit-scrollbar-thumb {
-  @media only screen and (min-width: $tablet) {
-    background: rgb(110, 110, 110);
-    border-radius: 10px;
+    @media only screen and (max-width: $tablet-l) {
+      transform: rotateZ(-15deg);
+    }
 
-    &:hover {
-      background: rgb(110, 110, 110);
+    @media only screen and (max-width: $tablet) {
+      transform: rotateZ(-35deg);
+      width: 250px;
+      height: 100px;
+      top: -20px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      transform: rotateZ(-35deg);
+      width: 140px;
+      height: 70px;
+      top: 0;
+      left: 55%;
     }
   }
 }
 
-/* VISUALLY HIDDEN */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.img {
+  max-width: 392px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-/* MAIN CONTENT */
-.main-content {
-  flex-grow: 1;
+.content {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
-/* RETINA BGS */
-// @media only screen and (-webkit-min-device-pixel-ratio: 2),
-// only screen and (min--moz-device-pixel-ratio: 2),
-// only screen and (-o-min-device-pixel-ratio: 2/1),
-// only screen and (min-device-pixel-ratio: 2),
-// only screen and (min-resolution: 192dpi),
-// only screen and (min-resolution: 2dppx) {}
+.content__title {
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.content__text {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+}

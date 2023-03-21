@@ -37,11 +37,11 @@ body {
   line-height: 1.5;
   font-weight: 300;
   color: var(--text-color);
-  background: #0A0B16 url("../images/bg.png") no-repeat center / cover;
+  background: #0a0b16 url("../images/bg.png") no-repeat center / cover;
   display: flex;
   flex-direction: column;
   align-items: center;
- justify-content: center;
+  justify-content: center;
 }
 
 .image {
@@ -77,6 +77,10 @@ body {
       left: 55%;
     }
   }
+
+  @media only screen and (max-width: $mobile) {
+    max-width: 90%;
+  }
 }
 
 .img {
@@ -97,9 +101,27 @@ body {
   font-size: 50px;
   line-height: 1.2;
   font-weight: 500;
+  transition: font-size 0.5s ease;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 40px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 30px;
+  }
 }
 
 .content__text {
   font-size: 30px;
   font-weight: 300;
+  transition: font-size 0.5s ease;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 20px;
+  }
 }

@@ -1,8 +1,5 @@
-// GENERAL
-@import "mixins";
-@import "variables";
-@import "fonts";
-@import "common";
-@import "container";
-
-// BLOCKS
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/fonts";
+@import "helpers/common";
+@import "helpers/container";

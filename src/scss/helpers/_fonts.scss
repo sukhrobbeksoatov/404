@@ -1,7 +1,6 @@
 /* FONTS */
 @font-face {
-  src: url("../fonts/exo-v20-latin-300italic.woff2") format("woff2"),
-    url("../fonts/exo-v20-latin-300italic.woff") format("woff");
+  src: url("../fonts/exo-v20-latin-300italic.woff2") format("woff2"), url("../fonts/exo-v20-latin-300italic.woff") format("woff");
   font-display: swap;
   font-family: "Exo";
   font-style: italic;
@@ -9,8 +8,7 @@
 }
 
 @font-face {
-  src: url("../fonts/exo-v20-latin-500.woff2") format("woff2"),
-    url("../fonts/exo-v20-latin-500.woff") format("woff");
+  src: url("../fonts/exo-v20-latin-500.woff2") format("woff2"), url("../fonts/exo-v20-latin-500.woff") format("woff");
   font-display: swap;
   font-family: "Exo";
   font-style: normal;
